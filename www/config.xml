@@ -23,7 +23,14 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
-        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+        
+    </platform>
+    <preference name="DisallowOverscroll" value="true" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
+    <plugin name="cordova-plugin-console" spec="~1.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
+  <plugin name="Capture" value="org.apache.cordova.Capture"/>
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
     <string>need camera access to take pictures</string>
 </edit-config>
         <edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
@@ -32,10 +39,4 @@
         <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
     <string>need to photo library access to get pictures from there</string>
 </edit-config>
-    </platform>
-    <preference name="DisallowOverscroll" value="true" />
-    <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
-    <plugin name="cordova-plugin-console" spec="~1.0.1" />
-    <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
-<!--    <plugin name="Capture" value="org.apache.cordova.Capture"/>-->
 </widget>
